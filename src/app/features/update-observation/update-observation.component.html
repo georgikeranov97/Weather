@@ -1,0 +1,46 @@
+<form [formGroup]="updateForm" (submit)="updateObservation()">
+  <div fxLayout="row">
+    <mat-form-field>
+      <input formControlName="temperature" matInput placeholder="Temperature"/>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field>
+      <input formControlName="humidity" matInput placeholder="Humidity"/>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field>
+      <input formControlName="windSpeed" matInput placeholder="Wind speed"/>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field>
+      <input formControlName="windDirection" matInput placeholder="Wind direction"/>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field>
+      <input formControlName="precipitation" matInput placeholder="Precipitation"/>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field>
+      <input formControlName="pressure" matInput placeholder="Pressure"/>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field>
+      <input formControlName="conditions" matInput placeholder="Conditions"/>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <button mat-button type="submit" [mat-dialog-close]="true">
+      Save
+    </button>
+    <button mat-button mat-dialog-close>
+      Cancel
+    </button>
+  </div>
+
+</form>

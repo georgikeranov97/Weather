@@ -1,0 +1,8 @@
+<button mat-button (click)="addObservation($event)">+ Add Observation</button>
+
+<app-observation *ngFor="let item of observations"
+  [observation]="item"
+  (updateObservation)="updateObservation($event)"
+  (deleteObservation)="deleteObservation($event)"
+></app-observation>
+
