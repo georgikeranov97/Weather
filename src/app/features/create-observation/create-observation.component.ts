@@ -11,6 +11,7 @@ import { Location } from '@angular/common';
 export class CreateObservationComponent implements OnInit {
 
   public observationForm;
+  public currentDate;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -18,16 +19,20 @@ export class CreateObservationComponent implements OnInit {
     private observationService: ObservationService,
   ) {
     this.observationForm = this.formBuilder.group({
+      location: ['', Validators.required],
       temperature: ['', Validators.required],
       humidity: ['', Validators.required],
       windSpeed: ['', Validators.required],
       windDirection: ['', Validators.required],
       precipitation: ['', Validators.required],
       pressure: ['', Validators.required],
-      conditions: ['', Validators.required]
+      conditions: ['', Validators.required],
+      time: ['', Validators.required],
+      date: ['', Validators.required],
     });
   }
   ngOnInit(): void {
+    this.formatCurrentDate();
   }
 
   public goBack() {
@@ -36,6 +41,11 @@ export class CreateObservationComponent implements OnInit {
 
   public createObservation() {
     this.observationService.createObservation(this.observationForm.value).subscribe();
+  }
+
+  public formatCurrentDate() {
+    this.currentDate = new Date().toISOString();
+    return this.currentDate;
   }
 
 }

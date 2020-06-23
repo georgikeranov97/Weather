@@ -1,5 +1,6 @@
 export interface Observation {
   id: number;
+  location: string;
   temperature: number;
   humidity: number;
   windSpeed: number;
@@ -7,4 +8,6 @@ export interface Observation {
   precipitation: number;
   pressure: number;
   conditions: string;
+  time: string;
+  date: string;
 }

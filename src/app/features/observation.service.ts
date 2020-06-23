@@ -76,6 +76,7 @@ export class ObservationService {
       tap(observation => {
         if (observation) {
           this.store.dispatch(updateObservationSuccess({ observation }));
+          this.getObservations();
         } else {
           throw new Error('Error');
         }
@@ -93,6 +94,7 @@ export class ObservationService {
     return this.httpClient.delete<Observation>(url).pipe(
       tap(observation => {
         this.store.dispatch(deleteObservationSuccess({ observationId: observation.id }));
+        this.getObservations();
       }),
       catchError((err) => {
         this.store.dispatch(deleteObservationFailure());

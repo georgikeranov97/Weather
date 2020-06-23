@@ -4,6 +4,11 @@
 <form [formGroup]="observationForm" (submit)="createObservation()">
   <div fxLayout="row">
     <mat-form-field>
+      <input formControlName="location" matInput placeholder="Location"/>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field>
       <input formControlName="temperature" matInput placeholder="Temperature"/>
     </mat-form-field>
   </div>
@@ -35,6 +40,16 @@
   <div fxLayout="row">
     <mat-form-field>
       <input formControlName="conditions" matInput placeholder="Conditions"/>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field formControlName="time">
+      <input matInput type="time" />
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field formControlName="date">
+      <input matInput type="date" />
     </mat-form-field>
   </div>
 
