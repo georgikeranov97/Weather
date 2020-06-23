@@ -19,13 +19,16 @@ export class UpdateObservationComponent implements OnInit {
     private observationService: ObservationService,
   ) {
       this.updateForm = this.formBuilder.group({
+        location: [this.observationToUpdate.location, Validators.required],
         temperature: [this.observationToUpdate.temperature, Validators.required],
         humidity: [this.observationToUpdate.humidity, Validators.required],
         windSpeed: [this.observationToUpdate.windSpeed, Validators.required],
         windDirection: [this.observationToUpdate.windDirection, Validators.required],
         precipitation: [this.observationToUpdate.precipitation, Validators.required],
         pressure: [this.observationToUpdate.pressure, Validators.required],
-        conditions: [this.observationToUpdate.conditions, Validators.required]
+        conditions: [this.observationToUpdate.conditions, Validators.required],
+        time: [this.observationToUpdate.time, Validators.required],
+        date: [this.observationToUpdate.date, Validators.required]
       });
     }
 

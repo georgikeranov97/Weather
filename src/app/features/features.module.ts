@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { ObservationsRoutingModule } from './observations-routing.module';
 import { RouterModule } from '@angular/router';
 import { ObservationComponent } from './observation/observation.component';
@@ -20,12 +21,7 @@ import { UpdateObservationComponent } from './update-observation/update-observat
 @NgModule({
   declarations: [ObservationComponent, CreateObservationComponent, ObservationsListComponent, UpdateObservationComponent],
   imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
+    SharedModule,
 
     FormsModule,
     ReactiveFormsModule,
