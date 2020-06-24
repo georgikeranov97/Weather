@@ -60,6 +60,7 @@ export class ObservationService {
         if (observation) {
           this.store.dispatch(createObservationSuccess({ observation }));
           this.router.navigate(['']);
+          this.getObservations();
         }
       }),
       catchError((err) => {

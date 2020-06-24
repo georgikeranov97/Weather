@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import * as fromObservations from '../app/features/store/observations.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { ConfirmationDialogComponent } from './shared/confirmation-dialog/confirmation-dialog.component';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({

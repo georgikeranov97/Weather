@@ -27,8 +27,8 @@ export class CreateObservationComponent implements OnInit {
       precipitation: ['', Validators.required],
       pressure: ['', Validators.required],
       conditions: ['', Validators.required],
-      time: ['', Validators.required],
-      date: ['', Validators.required],
+      time: [''],
+      date: [''],
     });
   }
   ngOnInit(): void {

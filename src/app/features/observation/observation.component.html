@@ -27,7 +27,7 @@
       Conditions: <span> {{ observation.conditions }}</span>
     </p>
     <p>
-      Date / Тime: <span> {{ observation.date | date }} </span>&#8725;<span> {{ observation.time }} </span>
+      Date / Тime: <span> {{ observation.date | customDatePipe }} </span>&#8725;<span> {{ observation.time }} </span>
     </p>
   </mat-card-content>
   <mat-card-actions>

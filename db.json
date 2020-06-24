@@ -10,7 +10,7 @@
       "pressure": "1001.9",
       "conditions": "Cloudy",
       "time": "11:15",
-      "date": "2020-07-04",
+      "date": "2020-07-02",
       "id": 3
     },
     {
@@ -38,6 +38,19 @@
       "time": "18:10",
       "date": "04.06.2020 г.",
       "id": 6
+    },
+    {
+      "location": "Varna",
+      "temperature": "23.0",
+      "humidity": "81",
+      "windSpeed": "2.6",
+      "windDirection": "E",
+      "precipitation": "14.2",
+      "pressure": "1015.2",
+      "conditions": "Cloudy",
+      "time": "11:13",
+      "date": "2020-06-04",
+      "id": 7
     }
   ]
 }
