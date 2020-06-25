@@ -8,11 +8,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { FilterByLocationPipe } from './pipes/filter-by-location.pipe';
 
 
 
 @NgModule({
-  declarations: [ConfirmationDialogComponent, DatePipe],
+  declarations: [ConfirmationDialogComponent, DatePipe, FilterByLocationPipe],
   imports: [
     CommonModule
   ],
@@ -24,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
 
     DatePipe,
+    FilterByLocationPipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

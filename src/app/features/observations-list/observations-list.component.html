@@ -1,5 +1,25 @@
 <button mat-button (click)="addObservation($event)">+ Add Observation</button>
 
+<div class="filters">
+  <label>Filters:</label>
+  <div class="dropdown">
+    <button class="selectBtn">Location
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <span>
+        <button class="btn-item" (click)="showAllLocations()">
+          All
+        </button>
+      </span>
+      <span *ngFor="let item of allObservations | filterByLocation">
+        <button class="btn-item" (click)="filterByLocation(item.location)">{{ item.location }}</button>
+      </span>
+    </div>
+  </div>
+</div>
+
+
 <app-observation *ngFor="let item of observations"
   [observation]="item"
   (updateObservation)="updateObservation($event)"

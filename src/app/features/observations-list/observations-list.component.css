@@ -1,0 +1,84 @@
+.filters {
+  overflow: hidden;
+  background-color: #333;
+}
+
+label {
+  color: #fff;
+  float: left;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.filters a {
+  float: left;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .selectBtn {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0.95rem 1rem;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.btn-item {
+  border: none;
+  outline: none;
+  color: #333;
+  background-color: #f9f9f9;
+  font-family: inherit;
+  margin: 0;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: start;
+}
+
+.dropdown-content span:hover > .btn-item {
+  background-color: #ddd;
+}
+
+.filters a:hover, .dropdown:hover .selectBtn {
+  background-color: #fff;
+  color: #333;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content span {
+  float: none;
+  color: black;
+  padding: 0.5rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content span:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
