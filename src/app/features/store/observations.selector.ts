@@ -16,7 +16,6 @@ export const selectByName = createSelector(
   selectAllObservations,
   (state, props) => state.filter(item => item.location === props.location)
 );
-
 export interface State {
   [fromObservations.featureKey]: fromObservations.State;
 }

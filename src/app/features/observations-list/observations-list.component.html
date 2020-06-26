@@ -17,6 +17,19 @@
       </span>
     </div>
   </div>
+  <div class="dropdown">
+    <button class="selectBtn">Date
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <span>
+        <button class="btn-item" (click)="sortByDate(ascLabel)">{{ ascLabel }}</button>
+      </span>
+      <span>
+        <button class="btn-item" (click)="sortByDate(descLabel)">{{ descLabel }}</button>
+      </span>
+    </div>
+  </div>
 </div>
 
 
