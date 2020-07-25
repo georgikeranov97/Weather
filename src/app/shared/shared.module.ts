@@ -8,13 +8,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { FilterByLocationPipe } from './pipes/filter-by-location.pipe';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 
 @NgModule({
   declarations: [ConfirmationDialogComponent, DatePipe, FilterByLocationPipe],
   imports: [
-    CommonModule
+    CommonModule,
+    AngularFontAwesomeModule
   ],
   exports: [
     MatCardModule,

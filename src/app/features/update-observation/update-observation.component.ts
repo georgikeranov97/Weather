@@ -7,7 +7,7 @@ import { ObservationService } from '../observation.service';
 @Component({
   selector: 'app-update-observation',
   templateUrl: './update-observation.component.html',
-  styleUrls: ['./update-observation.component.css']
+  styleUrls: ['./update-observation.component.scss']
 })
 export class UpdateObservationComponent implements OnInit {
 

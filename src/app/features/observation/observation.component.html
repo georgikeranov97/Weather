@@ -1,37 +1,41 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title> {{ observation.location }} </mat-card-title>
-  </mat-card-header>
-  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
-  <mat-card-content>
-    <p>
-      Temperature: <span> {{ observation.temperature }}</span>
-    </p>
-    <p>
-      Relative Humidity: <span> {{ observation.humidity }}</span>
-    </p>
-    <p>
-      Wind direction: <span> {{ observation.windDirection }}</span>
-    </p>
-    <p>
-      Wind speed: <span> {{ observation.windSpeed }}</span>
-    </p>
-    <p>
-      Precipitation: <span> {{ observation.precipitation }}</span>
-    </p>
-    <p>
-      Atmospheric pressure: <span> {{ observation.pressure }}</span>
-    </p>
-    <p>
-      Conditions: <span> {{ observation.conditions }}</span>
-    </p>
-    <p>
-      Date / Тime: <span> {{ observation.date | customDatePipe }} </span>&#8725;<span> {{ observation.time }} </span>
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button (click)="openEditForm()" >EDIT</button>
-    <button mat-button (click)="openDeleteConfirmationDialog()">DELETE</button>
-  </mat-card-actions>
-</mat-card>
+<div class="observation-wrapper">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>
+        {{ observation.location }} </mat-card-title>
+      <mat-card-actions>
+        <button mat-button (click)="openEditForm()" >EDIT</button>
+        <button mat-button (click)="openDeleteConfirmationDialog()">DELETE</button>
+      </mat-card-actions>
+    </mat-card-header>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <mat-card-content>
+      <p>
+        Temperature: <span class="observation-data"> {{ observation.temperature }}&#176;C</span>
+      </p>
+      <p>
+        Humidity: <span class="observation-data"> {{ observation.humidity }}&#37;</span>
+      </p>
+      <p>
+        Wind direction: <span class="observation-data"> {{ observation.windDirection }}</span>
+      </p>
+      <p>
+        Wind speed: <span class="observation-data"> {{ observation.windSpeed }}&nbsp;m/s</span>
+      </p>
+      <p>
+        Precip: <span class="observation-data"> {{ observation.precipitation }}&nbsp;mm</span>
+      </p>
+      <p>
+        Pressure: <span class="observation-data"> {{ observation.pressure }}&nbsp;hPa</span>
+      </p>
+      <p>
+        Conditions: <span class="observation-data"> {{ observation.conditions }}</span>
+      </p>
+      <p>
+        Date / Тime: <span class="observation-data"> {{ observation.date | customDatePipe }} </span>&#8725;<span class="observation-data"> {{ observation.time }} </span>
+      </p>
+    </mat-card-content>
+
+  </mat-card>
+</div>

@@ -12,7 +12,7 @@ const DESCENDING = CONSTANTS.LABELS.DESCENDING;
 @Component({
   selector: 'app-observations-list',
   templateUrl: './observations-list.component.html',
-  styleUrls: ['./observations-list.component.css']
+  styleUrls: ['./observations-list.component.scss']
 })
 export class ObservationsListComponent implements OnInit {
   public observations: Observation[];
